@@ -18,11 +18,17 @@
       }
     },
     async fetch() {
-      const data = await this.$http.$get(this.getUrl(this.$router.currentRoute.params.item))
-      this.item = data[0]
+      console.log(this.getData.filter(pic => (pic.date === this.$router.currentRoute.params.item)))
+      if(this.getData.length && this.getData.filter(pic => (pic.date === this.$router.currentRoute.params.item) )){
+        const data = this.getData.filter(pic => (pic.date === this.$router.currentRoute.params.item))
+        this.item = data[0]
+      } else {
+        const data = await this.$http.$get(this.getUrl(this.$router.currentRoute.params.item))
+        this.item = data[0]
+      }
     },
     computed : {
-      ...mapGetters(['getUrl'])
+      ...mapGetters(['getUrl','getData'])
     },
     mounted () {
         this.$store.commit('setPageItem',true)

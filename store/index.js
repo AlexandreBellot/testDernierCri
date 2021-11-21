@@ -1,3 +1,11 @@
+/*****  Paramètre DU FLUX  *****/
+
+const BASEURL = new URL('https://api.nasa.gov/planetary/apod')
+const NBDAY = 10
+const APIKEY = 'R9cjF4fzdCXvTyOcdTSLdjUyRef476JJHOg7S3EG'
+
+/***** */
+
 export const state = () => ({
   data: [],
   inPageItem: false,
@@ -23,18 +31,16 @@ export const getters = {
     getData: (state) => state.data,
     getUrl: () => {
       return param => {
-        const urlBase = new URL('https://api.nasa.gov/planetary/apod')
-        const nbDay = 10
         const theDate = new Date()
-        const startDate = new Date(theDate.getTime() - nbDay*86400000).toISOString().substr(0,10);
+        const startDate = new Date(theDate.getTime() - NBDAY*86400000).toISOString().substr(0,10);
         const today = theDate.toISOString().substr(0,10);
 
         const urlParams = {
-            api_key:'R9cjF4fzdCXvTyOcdTSLdjUyRef476JJHOg7S3EG',
+            api_key: APIKEY,
             start_date: (param) ? param : startDate, 
             end_date: (param) ? param : today
         }
-        urlBase.search = new URLSearchParams(urlParams).toString();
+        BASEURL.search = new URLSearchParams(urlParams).toString();
         return `${urlBase}`
       }
     }

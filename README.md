@@ -1,6 +1,6 @@
-# website
+# test dernier cri
 
-## Build Setup
+## information sur le Build
 
 ```bash
 # install dependencies
@@ -16,5 +16,10 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
+## developper avec Nuxt
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+L'api va chercher le flux de la nasa : https://api.nasa.gov/planetary/apod
+Voir dans le store/index pour les params. #todo -> faire un fichier a part
+
+
+

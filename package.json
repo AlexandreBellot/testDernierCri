@@ -16,7 +16,7 @@
     "@nuxt/http": "^0.6.4",
     "core-js": "^3.8.3",
     "gsap": "^3.6.0",
-    "nuxt": "^2.5.0",
+    "nuxt": "2.15.8",
     "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {

@@ -18,10 +18,16 @@
       }
     },
     async fetch() {
-      this.pictures = await this.$http.$get(this.getUrl(null))
+      console.log(this.getData.length)
+      if(this.getData.length){
+        this.pictures = this.getData
+      } else {
+        this.pictures = await this.$http.$get(this.getUrl(null))
+        this.$store.commit('setData',this.pictures)
+      }
     },
     computed : {
-      ...mapGetters(['getUrl'])
+      ...mapGetters(['getUrl','getData'])
     },
     mounted() {
       this.$store.commit('setPageItem',false)
