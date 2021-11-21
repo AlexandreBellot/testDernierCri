@@ -1,0 +1,17 @@
+{
+  "entry": "server.js",
+  "files": {
+    "components/item-list.js": "components/item-list.js",
+    "components/item-single.js": "components/item-single.js",
+    "pages/_item.js": "pages/_item.js",
+    "pages/index.js": "pages/index.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "components/item-list.js": "components/item-list.js.map",
+    "components/item-single.js": "components/item-single.js.map",
+    "pages/_item.js": "pages/_item.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "server.js": "server.js.map"
+  }
+}

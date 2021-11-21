@@ -1,0 +1,14 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/bellot/GitHub/magento/testDernierCri/pages/index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "item",
+    "path": "/:item",
+    "component": "/Users/bellot/GitHub/magento/testDernierCri/pages/_item.vue",
+    "chunkName": "pages/_item"
+  }
+]
