@@ -1,0 +1,213 @@
+$font-path: '/fonts'
+@import "variables"
+
+@font-face
+  font-family: 'DMSerifDisplay'
+  src: url('~assets/DMSerifDisplay-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: 'Kiwi'
+  src: url('~assets/KiwiMaru-Light.woff') format('woff')
+  font-weight: light
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: 'Kiwi'
+  src: url('~assets/KiwiMaru-Medium.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: 'Kiwi'
+  src: url('~assets/KiwiMaru-Regular.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+
+@import "mixin"
+@import "items"
+@import "single"
+
+
+// Viewport
+.viewport
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+  overflow: hidden
+
+// Conteneur du scroll
+.viewport-scroll
+  position: absolute
+  z-index: 10
+  width: 100%
+  overflow: hidden
+  backface-visibility: hidden
+  transform-style: preserve-3d
+
+
+// Element de mise en page
+// **************************************************************************************************** //
+
+
+body
+  background: $light
+  font-family: $txt_ff
+  font-weight: $txt_fw
+  text-align: left
+  padding: 0px
+  margin: 0px
+  line-height: 1.5
+  color: $txt_col
+  @media #{$small-only}
+  font-size: 17px
+
+  @media #{$medium-up}
+  font-size: 16px
+
+  @media #{$large-up}
+  font-size: 15px
+
+  @media #{$xlarge-up}
+  font-size: 16px
+
+  @media #{$xxlarge-up}
+  font-size: 17px
+
+  *
+    box-sizing: border-box
+
+
+main
+  padding: 30px 8vw
+  @media #{$large-up}
+    padding: 0px
+
+
+
+// **************************************************************************************************** //
+//    BALISE TEXTUELE
+// **************************************************************************************************** //
+
+*:focus, *:active
+  outline: 0
+
+
+// LINK
+a
+  color: $col1
+  &:hover
+    color: $col2
+
+
+
+// LINK + BUTTON
+a, button
+  font-size: 1em
+  cursor: pointer
+  text-decoration: none
+  color: $col1
+  @include transition($lnk_trans)
+  &:hover
+    color: $col1
+
+
+// BUTTON
+button
+  font-family: $ff1
+
+.btn-primary
+  display: inline-block
+  padding-bottom: 3px
+  position: relative
+  overflow: hidden
+  &::after
+    content: ''
+    left: 50%
+    position: absolute
+    width: 45%
+    height: 1px
+    background: rgba(0,0,0,0.6)
+    bottom: 0
+    transform: translate(-50%,0)
+    transition: All 0.4s
+  &:hover
+    &::after 
+      width: 100%
+    
+
+
+// STRONG
+b, strong
+  font-weight: 600
+
+
+// PARAGRAPHE
+p, ul
+  margin: 0
+  & + p, & + ul
+    margin-top: 1rem
+
+
+
+// IMAGE
+img
+  width: auto
+  height: auto
+  max-width: 100%
+
+
+figure
+  margin: 0
+
+// contenus
+
+header 
+  text-align: center
+  transition: all 1s
+
+h1
+  line-height: 1.2em
+  letter-spacing: 3px
+  display: inline-block
+  border-bottom: 1px solid rgba(0,0,0,0.5)
+  padding-bottom: 30px
+  margin-bottom: 0px
+  strong
+    display: block
+    font-size: 1.5em
+
+.baseline
+  margin-top: 5px
+  padding-top: 15px
+  display: inline-block
+  border-top: 1px solid rgba(0,0,0,0.5)
+
+h1,h2,h3
+  font-family: $ff2
+
+h1,.loading
+  text-align: center
+
+.siteFooter 
+  padding: 5vw
+  text-align: center
+  margin-top: 4vw
+  border-top: 1px solid #ddd
+
+@media #{$large-up}
+  header
+    margin: 15vh 0px
+  h1
+    font-size: 3em
+  .baseline
+    padding: 0px 30px

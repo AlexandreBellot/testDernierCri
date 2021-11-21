@@ -1,0 +1,55 @@
+.pageItem
+  header
+    margin: 2vh 0px 0vh 0px
+  .item-wrapper
+    text-align: center
+  .item-img
+    position: relative
+    img,iframe
+      display: block
+      width: 100%
+  .item-content
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding: 15px
+    color: #fff
+    background: rgba(0,0,0,0.8)
+    display: flex
+    justify-content: space-between
+  .item-desc
+    padding-top: 30px
+    text-align: left
+    h3
+      font-size: 1.3em
+    
+
+  // **************************************************************************************************** //
+  //    DESCKTOP
+  // **************************************************************************************************** //  
+
+  @media #{$large-up}
+    .single-picture 
+      padding: 20px 8vw
+  
+  @media #{$xlarge-up}
+    .single-picture 
+      .item-wrapper
+        padding-left: 55%
+        position: relative
+        margin-top: 5vh
+        text-align: left
+        h2 
+          font-size: 2.2em
+          padding-bottom: 10px 
+        h2,h3
+          margin: 0
+        .item-img
+          position: absolute
+          left: 0px
+          width: 50%
+          top: 0
+        .item-desc 
+          padding: 0px
+
+
