@@ -16,10 +16,10 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-## developper avec Nuxt
+## developpé avec Nuxt
 
 L'api va chercher le flux de la nasa : https://api.nasa.gov/planetary/apod
-Voir dans le store/index pour les params. #todo -> faire un fichier a part
+Voir dans le store/index pour les params.
 
 
 
