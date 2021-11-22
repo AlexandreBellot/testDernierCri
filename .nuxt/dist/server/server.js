@@ -1709,7 +1709,7 @@ const getters = {
         end_date: param ? param : today
       };
       BASEURL.search = new URLSearchParams(urlParams).toString();
-      return `${urlBase}`;
+      return `${BASEURL}`;
     };
   }
 };
