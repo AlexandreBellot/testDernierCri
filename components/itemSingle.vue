@@ -1,6 +1,6 @@
 <template>
     <div class="item-wrapper">
-        <NuxtLink class="back-home btn-primary" to="/"><font-awesome-icon :icon="['fas', 'arrow-circle-left']"/> Back home</NuxtLink><br/>
+        <div class="item-wrapperTop"><NuxtLink class="back-home btn-primary" to="/"><font-awesome-icon :icon="['fas', 'arrow-circle-left']"/> Back home</NuxtLink></div>
         <h2 class="item-title">{{ item.title }}</h2>
         <div class="item-img">
             <div class="item-content">

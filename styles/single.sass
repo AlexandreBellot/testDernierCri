@@ -35,21 +35,21 @@
   @media #{$xlarge-up}
     .single-picture 
       .item-wrapper
-        padding-left: 55%
         position: relative
         margin-top: 5vh
+        display: flex
+        flex-flow: wrap
         text-align: left
+        .item-wrapperTop, h2 
+          width: 100%
         h2 
           font-size: 2.2em
           padding-bottom: 10px 
         h2,h3
           margin: 0
-        .item-img
-          position: absolute
-          left: 0px
+        .item-img, .item-desc 
           width: 50%
-          top: 0
         .item-desc 
-          padding: 0px
+          padding: 0px 0px 0px 50px
 
 

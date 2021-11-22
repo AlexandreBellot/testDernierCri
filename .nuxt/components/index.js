@@ -1,5 +1,5 @@
-export const ItemList = () => import('../../components/itemList.vue' /* webpackChunkName: "components/item-list" */).then(c => wrapFunctional(c.default || c))
-export const ItemSingle = () => import('../../components/itemSingle.vue' /* webpackChunkName: "components/item-single" */).then(c => wrapFunctional(c.default || c))
+export { default as ItemList } from '../../components/itemList.vue'
+export { default as ItemSingle } from '../../components/itemSingle.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

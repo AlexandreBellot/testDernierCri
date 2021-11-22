@@ -3,14 +3,12 @@
     "name": "index",
     "path": "/",
     "component": "/Users/bellot/GitHub/magento/testDernierCri/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_fcdfc480"
+    "chunkName": "pages/index"
   },
   {
     "name": "item",
     "path": "/:item",
     "component": "/Users/bellot/GitHub/magento/testDernierCri/pages/_item.vue",
-    "chunkName": "pages/_item",
-    "_name": "_0572ce40"
+    "chunkName": "pages/_item"
   }
 ]
